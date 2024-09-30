@@ -1,0 +1,27 @@
+*{
+    margin 0px;
+    pading 0px;
+}
+    
+    table
+    {
+        background-color: aquamarine;
+        border-width: 10px;
+        border-style: groove;
+        width: 10%;
+    }
+#heading{
+    background-color: burlywood;
+    font-size: 60px;;
+    text-align: center;
+    color: red;
+}
+#row1{
+    text-align: center;
+    background-color: red;
+
+}
+#row2{
+    background-color: green;
+    text-align: center;
+}
