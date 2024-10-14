@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- <p></p>
+    <p></p>
+    <button onclick="display()">click here</button> -->
+<!-- 
+    <h1>to be change</h1>
+    <a href="http://abes.ac.in">ABES</a>
+    <button onclick="changeheader()">H1 change</button> -->
+
+
+    <!-- <button >ON CLICK</button> -->
+    <!-- <script>
+        const button = document.querySelector('button');
+        button.addEventListener('click',() => {alert('hello'})
+    </script> -->
+
+
+
+    <!-- using inline arrow function -->
+    <!-- <button >ON CLICK</button>
+    <p id="res">esfs</p>
+
+   <script>
+     const button = document.querySelector('button');
+     button.addEventListener('click',() => {document.getElementById('res').innerHTML = "Updated"});
+   </script> -->
+   <!-- <button id="btn">Button 1</button>
+   <script>
+    document.getElementById('btn').onmouseover=()=>{
+        document.querySelector('body').style.backgroundColor ="orange";
+    }
+   </script> -->
+   <!-- <button id="btn">CLICK</button>
+   
+  <script>
+    const handleclick =()=>{
+        document.getElementById('btn').style.translate='30rem 0';
+    }
+    let btn=document.getElementById('btn');
+    btn.addEventListener('click',handleclick);
+  </script>
+   -->
+
+   
+   
+   <input type="text" id="txt" placeholder="input...">
+   <p id="res"></p>
+   
+   <script>
+       const handleInput = (event) => {
+           document.getElementById('res').innerHTML = event.target.value;
+       }
+   
+       let myInput = document.getElementById('txt');
+       myInput.addEventListener('input', handleInput);
+   </script>
+   
+   </body>
+   </html>
+   
+
+
