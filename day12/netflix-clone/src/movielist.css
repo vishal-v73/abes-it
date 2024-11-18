@@ -1,0 +1,17 @@
+ .movielist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.moviecard{
+    width:30%;
+    margin: 10px;
+    height:600px;
+    padding: 20px;
+    border: 10px solid white;
+}
+.movieimg{
+    width:100%;
+    height:400px;
+    padding:20px
+} 
