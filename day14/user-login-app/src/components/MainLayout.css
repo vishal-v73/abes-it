@@ -1,0 +1,19 @@
+nav{
+    background-color: black;
+}
+ul{
+    display: flex;
+    gap: 20px;
+}
+ul li{
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: beige;
+    box-shadow: 10px 10px 10px;
+}
+a:hover{
+    background-color: grey;
+}
