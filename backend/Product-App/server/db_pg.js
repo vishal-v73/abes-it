@@ -14,31 +14,31 @@ client.connect()
 .catch(err=>{
     console.log("DB Error",err.message)
 })
-// const createUser=()=>{
-//     try{
-//         const res =client.query("insert into users(name,email,age) values('Ashish Gupta','Ashish35483@gmail.com','24')")
-//         console.log("USer created Succesfully")
-//     }
+const createUser=()=>{
+    try{
+        const res =client.query("insert into users(name,email,age) values('Ashish Gupta','Ashish35483@gmail.com','24')")
+        console.log("USer created Succesfully")
+    }
 
-//     catch(err){
-//         console.log("insert querry Error",err.message)
-//     }
-// }
-// createUser();
+    catch(err){
+        console.log("insert querry Error",err.message)
+    }
+}
+createUser();
 
-//get
+get
 
-// const geteUser=async()=>{
-//     try{
-//         const res =await client.query("select * from users order by age desc")
-//         console.log("User Data",res.rows);
-//     }
+const geteUser=async()=>{
+    try{
+        const res =await client.query("select * from users order by age desc")
+        console.log("User Data",res.rows);
+    }
 
-//     catch(err){
-//         console.log("select querry Error",err.message)
-//     }
-// }
-// geteUser();
+    catch(err){
+        console.log("select querry Error",err.message)
+    }
+}
+geteUser();
 
 const updateUser=async()=>{
     try{
