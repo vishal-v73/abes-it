@@ -11,7 +11,7 @@ const ViewUsers = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("https://userapp6.onrender.com/users");
+      const res = await axios.get("https://userapp7.onrender.com");
       console.log("API response:", res.data); 
       setUsers(res.data);
     } catch (err) {
