@@ -1,0 +1,22 @@
+.Header{
+  width: 100vw;
+  height: 10vh;
+  background-color: black;
+  color: aliceblue;
+  text-align: center;
+}
+.Content{
+    width: 100vw;
+    height: 85vh;
+    background-color: rgb(155, 149, 149);
+    color: rgb(16, 17, 18);
+    text-align: center;
+    overflow-y: scroll;
+  }
+  .Footer{
+    width: 100vw;
+    height: 5vh;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+  }
