@@ -11,8 +11,8 @@ const ViewUsers = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("https://userapp7.onrender.com");
-      console.log("API response:", res.data); 
+      const res = await axios.get("https://userapp7.onrender.com/users");
+      console.log("API response:", res.data);
       setUsers(res.data);
     } catch (err) {
       console.error("User Fetching Error:", err.message);
@@ -26,31 +26,38 @@ const ViewUsers = () => {
       {error ? (
         <p style={{ color: 'red' }}>Error: {error}</p>
       ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>Sr.No</th>
-              <th>User Name</th>
-              <th>User Email</th>
-              <th>User Role</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {Array.isArray(users) && users.map((user, index) => (
-              <tr key={user.id || index}>
-                <td>{index + 1}</td>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>{user.role}</td>
-                <td>
-                  <button>Edit</button>&nbsp;
-                  <button>Delete</button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <>
+          {users.length === 0 
+            ? <p>No users found.</p>
+            : (
+              <table>
+                <thead>
+                  <tr>
+                    <th>Sr.No</th>
+                    <th>User Name</th>
+                    <th>User Email</th>
+                    <th>User Role</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {users.map((user, index) => (
+                    <tr key={user._id}>
+                      <td>{index + 1}</td>
+                      <td>{user.name}</td>
+                      <td>{user.email}</td>
+                      <td>{user.role}</td>
+                      <td>
+                        <button>Edit</button>&nbsp;
+                        <button>Delete</button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )
+          }
+        </>
       )}
     </div>
   );
