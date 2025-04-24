@@ -30,21 +30,20 @@ const addUser=async(req,res)=>{
   }
 }
 
-const editUser=async(req,res)=>{
-  try{
-    const email=req.params.email;
-    const {name,password,role}=req.body;
-     const updateduser=await User.findOneAndUpdate({email},{name,password,role},{new:true});
-     res.status(200).json(updateduser);
+
+const editUser = async (req, res) => {
+  try {
+    const { email, name, password, role } = req.body; // get email from body
+    const updatedUser = await User.findOneAndUpdate( { email }, { name, password, role }, { new: true });
+    res.status(200).json(updatedUser);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
   }
-  catch(err){
-    res.status(500).json({message: err.message})
-  }
-}
+};
 
 const deleteUser=async(req,res)=>{
   try{
-    const email=req.params.email;
+    const {email}=req.body
      const deletedUser=await User.deleteOne({email});
      res.status(200).json(deletedUser);
   }
